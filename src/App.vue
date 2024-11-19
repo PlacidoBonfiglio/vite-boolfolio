@@ -1,5 +1,5 @@
 <script>
-import AppMain from './components/AppMain.vue';
+import AppExercises from './components/AppExercises.vue';
 import AppHeader from './components/AppHeader.vue';
 
 export default {
@@ -9,7 +9,7 @@ export default {
         }
     },
     components: {
-      AppMain,
+      AppExercises,
       AppHeader,
     }
 }
@@ -17,7 +17,7 @@ export default {
 
 <template>
   <AppHeader/>
-  <AppMain />
+  <AppExercises />
 </template>
 
 <style lang="scss">
