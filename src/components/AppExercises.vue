@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import AppExercisesCards from './AppExercisesCards.vue';
 
 export default {
     name: "AppExercises",
@@ -7,6 +8,9 @@ export default {
         return {
             exercisesList : [],
         }
+    },
+    components: {
+        AppExercisesCards
     },
     methods: {
         getExercises() {
@@ -31,27 +35,7 @@ export default {
 
         <div class="container mb-5">
             <div class="row row-cols-6 gap-4 justify-content-center">
-                <div class="col text-center text-white" v-for="exercise in exercisesList" :key="exercise.id">
-                    <p class="mt-3">
-                        <span class="fw-bold">Nome Esercizio: </span>{{exercise.exercise_name}}
-                    </p>
-
-                    <p>
-                        <span class="fw-bold">Nome repo: </span>{{exercise.repo_name}}
-                    </p>
-
-                    <p>
-                        <span class="fw-bold">Esercizio completato: </span>{{exercise.exercise_completed}}
-                    </p>
-
-                    <p>
-                        <span class="fw-bold">Bonus dell'esercizio: </span>{{exercise.exercise_bonus}}
-                    </p>
-
-                    <p>
-                        <span class="fw-bold">Data: </span>{{exercise.date}}
-                    </p>
-                </div>
+                <AppExercisesCards v-for="exercise in exercisesList" :key="exercise.id" :exerciseObj="exercise" />
             </div>
         </div>
         
