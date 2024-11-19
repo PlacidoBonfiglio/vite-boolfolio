@@ -29,8 +29,6 @@ export default {
 <template>
     <main>
 
-        <h1 class="text-center p-5">Vite Boolfolio</h1>
-
         <div class="container mb-5">
             <div class="row row-cols-6 gap-4 justify-content-center">
                 <div class="col text-center text-white" v-for="exercise in exercisesList" :key="exercise.id">
@@ -56,6 +54,7 @@ export default {
                 </div>
             </div>
         </div>
+        
     </main>
 </template>
 
